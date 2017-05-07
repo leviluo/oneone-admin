@@ -7,6 +7,7 @@ import { injectReducer } from '../../store/reducers'
 // import myNotice from './routes/MyNotice'
 // import requestApproval from './routes/RequestApproval'
 import specialitiesManage from './routes/SpecialitiesManage'
+import suggestionsManage from './routes/SuggestionsManage'
 // import myUpdates from './routes/MyUpdates'
 
 
@@ -27,5 +28,6 @@ export default (store) => ({
         })
     },
     childRoutes:[
+        suggestionsManage(store)
     ]
 })

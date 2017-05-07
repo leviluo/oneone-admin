@@ -11,6 +11,10 @@ import serve from 'koa-static'
 import routers from './routers'
 import bodyParser from 'koa-bodyparser'
 import session from 'koa-session'
+import '../Public/utils'
+import mongo from './dbHelps/mongodb'; //启动mongo
+mongo()
+
 
 const router = require('koa-router')();
 

@@ -43,7 +43,7 @@ const Controller = {
     },
     addNewItem: async function(next) {
         var parentId = this.request.body.parentId
-        var itemName = this.request.body.itemName.trim()
+        var itemName = this.request.body.itemName.trim().html2Escape()
         var type = this.request.body.type
 
         // if (!parentId) {
@@ -86,7 +86,7 @@ const Controller = {
     },
     modifyItem: async function(next) {
         var id = this.request.body.id
-        var itemName = this.request.body.itemName
+        var itemName = this.request.body.itemName.trim().html2Escape()
         var type = this.request.body.type
 
         if (!id) {

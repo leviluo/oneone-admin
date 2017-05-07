@@ -7,3 +7,7 @@ const dbOptions = {
 }
 
 export default dbOptions
+
+export const mongodbOp = {
+	mongodb: 'mongodb://localhost/oneone',
+}

@@ -57,7 +57,7 @@ export default class memberCenter extends Component {
             </ul>
             <h3>用户管理</h3>
             <ul>
-              <li><Link to="/admincenter" className={this.props.location.pathname == '/admincenterr' ? 'active' : ''}>谁知道了</Link></li>
+              <li><Link to="/admincenter/suggestions" className={this.props.location.pathname == '/admincenter/suggestions' ? 'active' : ''}>客户建议</Link></li>
             </ul>
             </div>
             <div className="memberCenterContentRight">

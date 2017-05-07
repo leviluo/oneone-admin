@@ -1,4 +1,5 @@
 import specialitiesController from '../controllers/specialitiesController'
+import suggestionsController from '../controllers/suggestionsController'
 // import memberController from '../controllers/memberController'
 import authController from '../controllers/authController'
 import fileController from '../controllers/fileControllers'
@@ -24,4 +25,6 @@ export default function routers(router){
 	router.put("/specialities",specialitiesController.modifyItem,authController.islogin,router.allowedMethods());
 	// 删除
 	router.delete("/specialities",specialitiesController.deleteItem,authController.islogin,router.allowedMethods());
+	// 获取所有的建议
+	router.get("/suggestions",suggestionsController.getsuggestions,authController.islogin,router.allowedMethods());
 }
